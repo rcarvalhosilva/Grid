@@ -12,13 +12,14 @@ Pod::Spec.new do |s|
   s.author        = { 'Rodrigo Carvalho' => 'rcdasilva94@gmail.com' }
   s.platform     = :ios
   s.ios.deployment_target = '9.0'
-  s.source       = { :git => 'https://github.com/rcarvalhosilva/Grid.git', :tag => '0.1.0_b3' }
+  s.source       = { :git => 'https://github.com/rcarvalhosilva/Grid.git', :tag => '0.1.0_b4' }
+  s.source_files = 'Sources/**/*.{h,m}'
 
   s.subspec 'Core' do |cs|
     cs.source_files = 'Sources/**/*.{h,m}'
   end
 
   s.subspec 'URLSession' do |us|
-    us.source_files = 'URLSession/**/*.{h,m}'
+    us.source_files = 'Sources/**/*.{h,m}', 'URLSession/**/*.{h,m}'
   end
 end
