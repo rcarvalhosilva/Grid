@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/rcarvalhosilva/Grid.git', :tag => '0.1.0_b1' }
 
   s.subspec 'Core' do |cs|
-    cs.source_files = 'Sources'
+    cs.source_files = 'Sources/**/*.{h,m}'
   end
 
   s.subspec 'URLSession' do |us|
-    us.source_files = 'URLSession'
+    us.source_files = 'URLSession/**/*.{h,m}'
   end
 end
