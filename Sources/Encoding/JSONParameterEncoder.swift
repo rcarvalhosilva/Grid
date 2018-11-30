@@ -8,8 +8,8 @@
 
 import Swift
 
-public struct JSONParameterEncoder: ParameterEncoder {
-    public static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
+struct JSONParameterEncoder: ParameterEncoder {
+    static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
         guard JSONSerialization.isValidJSONObject(parameters) else {
             throw NetworkError.invalidParameters
         }

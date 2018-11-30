@@ -9,6 +9,13 @@
 import Swift
 
 public struct URLParameterEncoder: ParameterEncoder {
+    public static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
+        guard let url = urlRequest.url else { throw NetworkError.missingURL }
+        let components = try createComponentsFrom(url, with: parameters)
+        urlRequest.url = components.url
+        insertContentTypeIfNeeded(&urlRequest)
+    }
+
     private static func createComponentsFrom(_ url: URL, with parameters: Parameters) throws -> URLComponents {
         guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { throw NetworkError.malformedURL }
         guard parameters.isEmpty == false else { return urlComponents }
@@ -19,13 +26,6 @@ public struct URLParameterEncoder: ParameterEncoder {
             urlComponents.queryItems?.append(queryItem)
         }
         return urlComponents
-    }
-
-    public static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
-        guard let url = urlRequest.url else { throw NetworkError.missingURL }
-        let components = try createComponentsFrom(url, with: parameters)
-        urlRequest.url = components.url
-        insertContentTypeIfNeeded(&urlRequest)
     }
 
     private static func insertContentTypeIfNeeded(_ urlRequest: inout URLRequest) {
