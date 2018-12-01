@@ -13,5 +13,14 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = '9.0'
   s.source       = { :git => 'https://github.com/rcarvalhosilva/Grid.git', :tag => s.version }
-  s.source_files = 'Grid/Sources/**/*'
+  s.swift_version = '4.2'
+
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'Grid/Sources/**/*'
+  end
+
+  s.subspec 'URLSession' do |ss|
+    ss.dependency 'GridNet/Core'
+    ss.source_files = 'Grid/URLSession/**/*'
+  end
 end
