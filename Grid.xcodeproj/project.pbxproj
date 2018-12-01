@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2625C9E21B2DB790067E694 /* GridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2625C9D21B2DB790067E694 /* GridTests.swift */; };
+		E2625CA021B2DB790067E694 /* Grid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E294040A21AC3F6A00C4F691 /* Grid.framework */; };
 		E294040F21AC3F6A00C4F691 /* Grid.h in Headers */ = {isa = PBXBuildFile; fileRef = E294040D21AC3F6A00C4F691 /* Grid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E294041721AC408100C4F691 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294041621AC408100C4F691 /* Request.swift */; };
 		E294041921AC459400C4F691 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294041821AC459400C4F691 /* HTTP.swift */; };
@@ -28,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E2625CA121B2DB790067E694 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E294040121AC3F6A00C4F691 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E294040921AC3F6A00C4F691;
+			remoteInfo = Grid;
+		};
 		E294043E21AC783E00C4F691 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E294040121AC3F6A00C4F691 /* Project object */;
@@ -52,6 +61,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E2625C9B21B2DB790067E694 /* GridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2625C9D21B2DB790067E694 /* GridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTests.swift; sourceTree = "<group>"; };
+		E2625C9F21B2DB790067E694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E294040A21AC3F6A00C4F691 /* Grid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Grid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E294040D21AC3F6A00C4F691 /* Grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		E294040E21AC3F6A00C4F691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +87,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E2625C9821B2DB790067E694 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2625CA021B2DB790067E694 /* Grid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E294040721AC3F6A00C4F691 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,11 +156,21 @@
 			path = Dispatchers;
 			sourceTree = "<group>";
 		};
+		E2625C9C21B2DB790067E694 /* GridTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2625C9D21B2DB790067E694 /* GridTests.swift */,
+				E2625C9F21B2DB790067E694 /* Info.plist */,
+			);
+			path = GridTests;
+			sourceTree = "<group>";
+		};
 		E294040021AC3F6A00C4F691 = {
 			isa = PBXGroup;
 			children = (
 				E294040C21AC3F6A00C4F691 /* Grid */,
 				E294042B21AC6E2100C4F691 /* GridApp */,
+				E2625C9C21B2DB790067E694 /* GridTests */,
 				E294040B21AC3F6A00C4F691 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,6 +180,7 @@
 			children = (
 				E294040A21AC3F6A00C4F691 /* Grid.framework */,
 				E294042A21AC6E2100C4F691 /* GridApp.app */,
+				E2625C9B21B2DB790067E694 /* GridTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +252,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E2625C9A21B2DB790067E694 /* GridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2625CA321B2DB790067E694 /* Build configuration list for PBXNativeTarget "GridTests" */;
+			buildPhases = (
+				E2625C9721B2DB790067E694 /* Sources */,
+				E2625C9821B2DB790067E694 /* Frameworks */,
+				E2625C9921B2DB790067E694 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2625CA221B2DB790067E694 /* PBXTargetDependency */,
+			);
+			name = GridTests;
+			productName = GridTests;
+			productReference = E2625C9B21B2DB790067E694 /* GridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E294040921AC3F6A00C4F691 /* Grid */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E294041221AC3F6A00C4F691 /* Build configuration list for PBXNativeTarget "Grid" */;
@@ -268,6 +317,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Rodrigo Silva";
 				TargetAttributes = {
+					E2625C9A21B2DB790067E694 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					E294040921AC3F6A00C4F691 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -292,11 +344,19 @@
 			targets = (
 				E294040921AC3F6A00C4F691 /* Grid */,
 				E294042921AC6E2100C4F691 /* GridApp */,
+				E2625C9A21B2DB790067E694 /* GridTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E2625C9921B2DB790067E694 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E294040821AC3F6A00C4F691 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +377,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E2625C9721B2DB790067E694 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2625C9E21B2DB790067E694 /* GridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E294040621AC3F6A00C4F691 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,6 +414,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E2625CA221B2DB790067E694 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E294040921AC3F6A00C4F691 /* Grid */;
+			targetProxy = E2625CA121B2DB790067E694 /* PBXContainerItemProxy */;
+		};
 		E294043F21AC783E00C4F691 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E294040921AC3F6A00C4F691 /* Grid */;
@@ -373,6 +446,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E2625CA421B2DB790067E694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VS28P7U5G;
+				INFOPLIST_FILE = GridTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rcdasilva94.GridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2625CA521B2DB790067E694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VS28P7U5G;
+				INFOPLIST_FILE = GridTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rcdasilva94.GridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E294041021AC3F6A00C4F691 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -589,6 +700,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E2625CA321B2DB790067E694 /* Build configuration list for PBXNativeTarget "GridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2625CA421B2DB790067E694 /* Debug */,
+				E2625CA521B2DB790067E694 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E294040421AC3F6A00C4F691 /* Build configuration list for PBXProject "Grid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
