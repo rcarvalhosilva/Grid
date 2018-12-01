@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.author        = { 'Rodrigo Carvalho' => 'rcdasilva94@gmail.com' }
   s.platform     = :ios
   s.ios.deployment_target = '9.0'
-  s.source       = { :git => 'https://github.com/rcarvalhosilva/Grid.git', :tag => '0.1.0_b5' }
+  s.source       = { :git => 'https://github.com/rcarvalhosilva/Grid.git', :tag => s.version }
   s.source_files = 'Sources/*', 'URLSession/*'
 end
