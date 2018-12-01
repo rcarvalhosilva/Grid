@@ -127,20 +127,18 @@
 			path = Dispatcher;
 			sourceTree = "<group>";
 		};
-		E200157F21AECFFA0089A822 /* URLSession */ = {
+		E200157F21AECFFA0089A822 /* Dispatchers */ = {
 			isa = PBXGroup;
 			children = (
 				E294042421AC669300C4F691 /* URLSessionDispatcher.swift */,
 				E294044521AD969900C4F691 /* URLSessionCodableDispatcher.swift */,
 			);
-			path = URLSession;
+			path = Dispatchers;
 			sourceTree = "<group>";
 		};
 		E294040021AC3F6A00C4F691 = {
 			isa = PBXGroup;
 			children = (
-				E294042321AC668000C4F691 /* URLSession */,
-				E294041521AC3F7400C4F691 /* Sources */,
 				E294040C21AC3F6A00C4F691 /* Grid */,
 				E294042B21AC6E2100C4F691 /* GridApp */,
 				E294040B21AC3F6A00C4F691 /* Products */,
@@ -159,6 +157,8 @@
 		E294040C21AC3F6A00C4F691 /* Grid */ = {
 			isa = PBXGroup;
 			children = (
+				E294042321AC668000C4F691 /* URLSession */,
+				E294041521AC3F7400C4F691 /* Sources */,
 				E294040D21AC3F6A00C4F691 /* Grid.h */,
 				E294040E21AC3F6A00C4F691 /* Info.plist */,
 			);
@@ -189,7 +189,7 @@
 		E294042321AC668000C4F691 /* URLSession */ = {
 			isa = PBXGroup;
 			children = (
-				E200157F21AECFFA0089A822 /* URLSession */,
+				E200157F21AECFFA0089A822 /* Dispatchers */,
 			);
 			path = URLSession;
 			sourceTree = "<group>";
