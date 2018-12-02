@@ -1,0 +1,12 @@
+osx_image: xcode10.1
+language: swift
+
+cache:
+  - bundler
+
+before_install:
+  - bundle install
+  - bundle update
+
+script:
+  – bundle exec fastlane ios coverage

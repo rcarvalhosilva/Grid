@@ -9,12 +9,12 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>GridApp.xcscheme_^#shared#^_</key>
+		<key>GridApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>GridTests.xcscheme_^#shared#^_</key>
+		<key>GridTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
@@ -22,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>E2625C9A21B2DB790067E694</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E294040921AC3F6A00C4F691</key>
 		<dict>
 			<key>primary</key>
