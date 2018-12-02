@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/GridNet.svg?style=flat)](https://cocoapods.org/pods/GridNet)
 [![License](https://img.shields.io/cocoapods/l/GridNet.svg?style=flat)](https://cocoapods.org/pods/GridNet)
 [![Platform](https://img.shields.io/cocoapods/p/GridNet.svg?style=flat)](https://cocoapods.org/pods/GridNet)
+[![Coverage Status](https://coveralls.io/repos/github/rcarvalhosilva/Grid/badge.svg)](https://coveralls.io/github/rcarvalhosilva/Grid)
 
 ## Installation
 
