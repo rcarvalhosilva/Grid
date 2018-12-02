@@ -4,7 +4,7 @@ language: swift
 cache:
   - bundler
 
-before_install:
+install:
   - bundle install
   - bundle update
 
