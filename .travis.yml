@@ -1,17 +1,18 @@
 osx_image: xcode10.1
 language: swift
+
 cache: bundler
 
 jobs:
   include:
-    - stage: Dependencies
-    before_install:
-      - bundle install
-      - bundle update
-    script: true
+    - stage: dependencies
+      before_install:
+        - bundle install
+        - bundle update
+      script: true
     - stage: test
-    script:
-      - bundle exec fastlane ios coverage
+      script:
+        - bundle exec fastlane ios coverage
     - stage: deploy
-    script:
-      - bundle show
+      script:
+        - bundle show
