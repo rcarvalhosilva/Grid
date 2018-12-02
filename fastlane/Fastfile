@@ -1,4 +1,4 @@
-# update_fastlane
+update_fastlane
 
 default_platform(:ios)
 
@@ -15,10 +15,10 @@ platform :ios do
   desc "Runs coverage"
   lane :coverage do
     tests
-    # xcov(
-    #   project: "Grid.xcodeproj",
-    #   scheme: "Grid",
-    #   output_directory: "xcov_output"
-    # )
+    xcov(
+      project: "Grid.xcodeproj",
+      scheme: "Grid",
+      output_directory: "xcov_output"
+    )
   end
 end
