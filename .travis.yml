@@ -1,0 +1,14 @@
+osx_image: xcode10.1
+language: swift
+
+cache: bundler
+before_install:
+  - bundle install
+jobs:
+  include:
+    - stage: Unit Tests
+      script:
+        - bundle exec fastlane ios coverage
+    - stage: deploy
+      script:
+        - bundle show
