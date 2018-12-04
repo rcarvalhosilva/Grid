@@ -6,11 +6,11 @@ before_install:
   - bundle install
 jobs:
   include:
-    if: type = pull_request OR branch = master
+    if: type = pull_request || branch = master
     - stage: Unit Tests
       script:
         - bundle exec fastlane ios coverage
     - stage: deploy
-    if: branch = master
-    script:
-      - bundle show
+      if: branch = master
+      script:
+        - bundle show
