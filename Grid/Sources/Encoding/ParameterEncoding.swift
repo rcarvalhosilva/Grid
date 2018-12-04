@@ -14,7 +14,7 @@ public protocol ParameterEncoder {
     static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws
 }
 
-public enum NetworkError: String, Error, Equatable {
+public enum EncodingError: String, Error, Equatable {
     case parametersNil = "Parameters were nil."
     case invalidParameters = "Parameters don't specify a valid JSON."
     case encondingFailed = "Parameters enconding failed."
@@ -25,5 +25,3 @@ public enum NetworkError: String, Error, Equatable {
         return rawValue
     }
 }
-
-

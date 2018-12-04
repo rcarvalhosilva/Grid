@@ -10,14 +10,14 @@ import Swift
 
 public struct URLParameterEncoder: ParameterEncoder {
     public static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
-        guard let url = urlRequest.url else { throw NetworkError.missingURL }
+        guard let url = urlRequest.url else { throw EncodingError.missingURL }
         let components = try createComponentsFrom(url, with: parameters)
         urlRequest.url = components.url
         insertContentTypeIfNeeded(&urlRequest)
     }
 
     private static func createComponentsFrom(_ url: URL, with parameters: Parameters) throws -> URLComponents {
-        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { throw NetworkError.malformedURL }
+        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { throw EncodingError.malformedURL }
         guard parameters.isEmpty == false else { return urlComponents }
 
         urlComponents.queryItems = []
