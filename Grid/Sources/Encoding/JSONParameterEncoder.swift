@@ -11,13 +11,13 @@ import Swift
 struct JSONParameterEncoder: ParameterEncoder {
     static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
         guard JSONSerialization.isValidJSONObject(parameters) else {
-            throw EncodingError.invalidParameters
+            throw NetworkError.invalidParameters
         }
         do {
             try addJsonData(from: parameters, to: &urlRequest)
             insertContentTypeIfNeeded(&urlRequest)
         } catch {
-            throw EncodingError.encondingFailed
+            throw NetworkError.encondingFailed
         }
     }
 
