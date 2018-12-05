@@ -1,10 +1,9 @@
 pull_request_rules:
-  - name: automatic merge on CI success and review
-   conditions:
-      - status-success=continuous-integration/travis-ci/pr
-      - "#approved-reviews-by>=1"
+  - name: automatic merge with strict
+    conditions:
       - base=master
-      - label!=work-in-progress
+      - "#approved-reviews-by>=1"
+      - status-success=continuous-integration/travis-ci/pr
     actions:
       merge:
         method: squash
