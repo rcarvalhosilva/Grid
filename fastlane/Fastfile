@@ -2,7 +2,7 @@ default_platform(:ios)
 
 platform :ios do
   desc "Run all the tests"
-  lane :tests do
+  private_lane :tests do
     scan(
       project: "Grid.xcodeproj",
       scheme: "Grid",
