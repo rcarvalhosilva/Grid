@@ -26,7 +26,7 @@ platform :ios do
   end
 
   desc "Create release PR from Develop to Master. Run this locally"
-  lane :open_release do
+  lane :open_release do |options|
     update_version(bump: options[:bump])
     version_number = get_version_number(xcodeproj: 'Grid.xcodeproj', target: 'Grid')
     commit_version_bump(
@@ -45,6 +45,7 @@ platform :ios do
 
   desc "Deploy to CocoaPods"
   lane :deploy do
+    pod_lib_lint
     version_number = get_version_number(xcodeproj: 'Grid.xcodeproj', target: 'Grid')
     tag_name = "#{version_number}"
     add_git_tag(

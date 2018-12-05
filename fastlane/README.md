@@ -26,11 +26,16 @@ Run all the tests
 fastlane ios coverage
 ```
 Runs coverage
+### ios open_release
+```
+fastlane ios open_release
+```
+Create release PR from Develop to Master. Run this locally
 ### ios deploy
 ```
 fastlane ios deploy
 ```
-Merge PR and deploy do CocoaPods
+Deploy to CocoaPods
 
 ----
 
