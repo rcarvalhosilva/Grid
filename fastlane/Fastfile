@@ -36,6 +36,7 @@ platform :ios do
     )
     push_to_git_remote
     create_pull_request(
+      api_token: ENV["GITHUB_API_TOKEN"],
       repo: "rcarvalhosilva/Grid",
       title: "Release %s" % version_number,
       head: "develop",
