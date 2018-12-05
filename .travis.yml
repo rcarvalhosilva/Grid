@@ -10,6 +10,6 @@ jobs:
       script:
         - bundle exec fastlane ios coverage
     - stage: deploy
-      if: type = push AND branch = master
+      # if: type = push AND branch = master
       script:
         - bundle exec fastlane ios deploy
