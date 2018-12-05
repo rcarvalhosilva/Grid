@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E2625C9E21B2DB790067E694 /* URLParameterEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2625C9D21B2DB790067E694 /* URLParameterEncoderTests.swift */; };
 		E2625CA021B2DB790067E694 /* Grid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E294040A21AC3F6A00C4F691 /* Grid.framework */; };
+		E281F89D21B765670050B6B6 /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281F89C21B765670050B6B6 /* NetworkErrorTests.swift */; };
+		E281F89F21B7657D0050B6B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281F89E21B7657D0050B6B6 /* NetworkError.swift */; };
+		E281F8A121B766320050B6B6 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281F8A021B766320050B6B6 /* ResultTests.swift */; };
 		E294040F21AC3F6A00C4F691 /* Grid.h in Headers */ = {isa = PBXBuildFile; fileRef = E294040D21AC3F6A00C4F691 /* Grid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E294041721AC408100C4F691 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294041621AC408100C4F691 /* Request.swift */; };
 		E294041921AC459400C4F691 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E294041821AC459400C4F691 /* HTTP.swift */; };
@@ -65,6 +68,9 @@
 		E2625C9B21B2DB790067E694 /* GridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2625C9D21B2DB790067E694 /* URLParameterEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoderTests.swift; sourceTree = "<group>"; };
 		E2625C9F21B2DB790067E694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E281F89C21B765670050B6B6 /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
+		E281F89E21B7657D0050B6B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E281F8A021B766320050B6B6 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		E294040A21AC3F6A00C4F691 /* Grid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Grid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E294040D21AC3F6A00C4F691 /* Grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		E294040E21AC3F6A00C4F691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 			children = (
 				E2625C9D21B2DB790067E694 /* URLParameterEncoderTests.swift */,
 				E2B18CEE21B69F7B00847C93 /* JSONParameterEncoderTests.swift */,
+				E281F89C21B765670050B6B6 /* NetworkErrorTests.swift */,
+				E281F8A021B766320050B6B6 /* ResultTests.swift */,
 				E2625C9F21B2DB790067E694 /* Info.plist */,
 			);
 			path = GridTests;
@@ -214,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E294041A21AC45A300C4F691 /* ParameterEncoding.swift */,
+				E281F89E21B7657D0050B6B6 /* NetworkError.swift */,
 				E294041C21AC49F300C4F691 /* URLParameterEncoder.swift */,
 				E294041E21AC591700C4F691 /* JSONParameterEncoder.swift */,
 			);
@@ -386,6 +395,8 @@
 			files = (
 				E2B18CEF21B69F7B00847C93 /* JSONParameterEncoderTests.swift in Sources */,
 				E2625C9E21B2DB790067E694 /* URLParameterEncoderTests.swift in Sources */,
+				E281F8A121B766320050B6B6 /* ResultTests.swift in Sources */,
+				E281F89D21B765670050B6B6 /* NetworkErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +413,7 @@
 				E294044621AD969900C4F691 /* URLSessionCodableDispatcher.swift in Sources */,
 				E294042221AC614600C4F691 /* NetworkDispatcher.swift in Sources */,
 				E294041721AC408100C4F691 /* Request.swift in Sources */,
+				E281F89F21B7657D0050B6B6 /* NetworkError.swift in Sources */,
 				E294041921AC459400C4F691 /* HTTP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

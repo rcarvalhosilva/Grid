@@ -13,17 +13,3 @@ public typealias Parameters = [String: Any]
 public protocol ParameterEncoder {
     static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws
 }
-
-public enum NetworkError: String, Error, Equatable {
-    case parametersNil = "Parameters were nil."
-    case invalidParameters = "Parameters don't specify a valid JSON."
-    case encondingFailed = "Parameters enconding failed."
-    case missingURL = "URL is nil."
-    case malformedURL = "URL is malformed."
-
-    public var localizedDescription: String {
-        return rawValue
-    }
-}
-
-
