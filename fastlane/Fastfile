@@ -1,5 +1,3 @@
-update_fastlane
-
 default_platform(:ios)
 
 platform :ios do
@@ -20,5 +18,41 @@ platform :ios do
       scheme: "Grid",
       output_directory: "xcov_output"
     )
+  end
+
+  private_lane :update_version do |options|
+    increment_version_number(bump_type: options[:bump])
+    version_bump_podspec(path: "GridNet.podspec", bump_type: options[:bump])
+  end
+
+  desc "Create release PR from Develop to Master. Run this locally"
+  lane :open_release do |options|
+    update_version(bump: options[:bump])
+    version_number = get_version_number(xcodeproj: 'Grid.xcodeproj', target: 'Grid')
+    commit_version_bump(
+      xcodeproj: "Grid.xcodeproj",
+      message: "Bumping version to %s" % version_number,
+      include: ["GridNet.podspec"]
+    )
+    push_to_git_remote
+    create_pull_request(
+      api_token: ENV["GITHUB_API_KEY"],
+      repo: "rcarvalhosilva/Grid",
+      title: "Release %s" % version_number,
+      head: "develop",
+      base: "master",
+    )
+  end
+
+  desc "Deploy to CocoaPods"
+  lane :deploy do
+    pod_lib_lint
+    version_number = get_version_number(xcodeproj: 'Grid.xcodeproj', target: 'Grid')
+    tag_name = "#{version_number}"
+    add_git_tag(
+      tag: tag_name
+    )
+    push_to_git_remote
+    pod_push(use_bundle_exec: true)
   end
 end

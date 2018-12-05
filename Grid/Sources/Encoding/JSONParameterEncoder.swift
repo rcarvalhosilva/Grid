@@ -13,16 +13,12 @@ struct JSONParameterEncoder: ParameterEncoder {
         guard JSONSerialization.isValidJSONObject(parameters) else {
             throw NetworkError.invalidParameters
         }
-        do {
-            try addJsonData(from: parameters, to: &urlRequest)
-            insertContentTypeIfNeeded(&urlRequest)
-        } catch {
-            throw NetworkError.encondingFailed
-        }
+        addJsonData(from: parameters, to: &urlRequest)
+        insertContentTypeIfNeeded(&urlRequest)
     }
 
-    private static func addJsonData(from parameters: Parameters, to urlRequest: inout URLRequest) throws {
-        let jsonAsData = try JSONSerialization.data(withJSONObject: parameters)
+    private static func addJsonData(from parameters: Parameters, to urlRequest: inout URLRequest) {
+        let jsonAsData = try? JSONSerialization.data(withJSONObject: parameters)
         urlRequest.httpBody = jsonAsData
     }
 
