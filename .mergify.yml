@@ -2,7 +2,7 @@ pull_request_rules:
   - name: automatic merge with strict
     conditions:
       - base=master
-      - "#approved-reviews-by>=1"
+      - author=rcarvalhosilva
       - status-success=continuous-integration/travis-ci/pr
       - label!=work-in-progress
     actions:
