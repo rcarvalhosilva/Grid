@@ -1,5 +1,5 @@
 pull_request_rules:
-  - name: automatic merge with strict
+  - name: automatic merge
     conditions:
       - base=master
       - head=develop
