@@ -35,9 +35,8 @@ platform :ios do
       include: ["GridNet.podspec"]
     )
     # push_to_git_remote
-    UI.message ENV["GITHUB_API_TOKEN"]
+    UI.message "Token ==== #{ENV["GITHUB_API_TOKEN"]}"
     create_pull_request(
-      api_token: token,
       repo: "rcarvalhosilva/Grid",
       title: "Release %s" % version_number,
       head: "develop",
