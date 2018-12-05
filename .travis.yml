@@ -2,11 +2,11 @@ osx_image: xcode10.1
 language: swift
 
 cache: bundler
-if: type = pull_request OR branch = master
 
 jobs:
   include:
-    - stage: Unit Tests
+    - stage: unit tests
+      if: type = pull_request OR branch = master
       script:
         - bundle exec fastlane ios coverage
     - stage: deploy
