@@ -34,9 +34,10 @@ platform :ios do
       message: "Bumping version to %s" % version_number,
       include: ["GridNet.podspec"]
     )
-    push_to_git_remote
+    # push_to_git_remote
+    UI.message ENV["GITHUB_API_TOKEN"]
     create_pull_request(
-      api_token: ENV["GITHUB_API_TOKEN"],
+      api_token: token,
       repo: "rcarvalhosilva/Grid",
       title: "Release %s" % version_number,
       head: "develop",
@@ -52,6 +53,6 @@ platform :ios do
     add_git_tag(
       tag: tag_name
     )
-    push_to_git_remote
+    # push_to_git_remote
   end
 end
