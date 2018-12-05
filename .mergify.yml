@@ -2,6 +2,7 @@ pull_request_rules:
   - name: automatic merge with strict
     conditions:
       - base=master
+      - head-develop
       - author=rcarvalhosilva
       - status-success=continuous-integration/travis-ci/pr
       - label!=work-in-progress
