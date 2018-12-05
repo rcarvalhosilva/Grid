@@ -1,5 +1,3 @@
-update_fastlane
-
 default_platform(:ios)
 
 platform :ios do
@@ -20,5 +18,31 @@ platform :ios do
       scheme: "Grid",
       output_directory: "xcov_output"
     )
+  end
+
+  private_lane :update_version do |options|
+    increment_version_number(version_number: options[:version])
+    version_bump_podspec(path: "GridNet.podspec", version_number: options[:version])
+  end
+
+  desc "Deploy do CocoaPods"
+  lane :deploy do
+    releaseBranchName = git_branch
+    UI.message(releaseBranchName)
+    update_version(version: releaseBranchName)
+    version_number = get_version_number(xcodeproj: 'Grid.xcodeproj', target: 'Grid')
+
+    tag_name = "#{version_number}"
+    commit_version_bump(
+      xcodeproj: "Grid.xcodeproj",
+      message: "[ci skip] Bumping version to %s" % tag_name,
+      include: ["Grid.podspec"]
+    )
+
+    add_git_tag(
+      tag: tag_name
+    )
+
+    # push_to_git_remote
   end
 end

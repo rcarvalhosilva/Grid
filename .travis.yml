@@ -11,4 +11,4 @@ jobs:
         - bundle exec fastlane ios coverage
     - stage: deploy
       script:
-        - bundle show
+        - bundle exec fastlane ios deploy

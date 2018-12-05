@@ -26,6 +26,11 @@ Run all the tests
 fastlane ios coverage
 ```
 Runs coverage
+### ios deploy
+```
+fastlane ios deploy
+```
+Merge PR and deploy do CocoaPods
 
 ----
 
