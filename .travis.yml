@@ -4,11 +4,11 @@ language: swift
 cache: bundler
 jobs:
   include:
-    - if: type = pull_request
+    if: type = pull_request OR branch = master
     - stage: Unit Tests
       script:
         - bundle exec fastlane ios coverage
     - stage: deploy
-      if: branch = master
+      if: type = push AND branch = master
       script:
-        - bundle show
+        - bundle exec fastlane ios deploy
