@@ -26,11 +26,16 @@ Runs coverage
 fastlane ios open_release
 ```
 Create release PR from Develop to Master. Run this locally
+### ios pre_deploy
+```
+fastlane ios pre_deploy
+```
+Prepare Deploy to CocoaPods
 ### ios deploy
 ```
 fastlane ios deploy
 ```
-Deploy to CocoaPods
+
 
 ----
 

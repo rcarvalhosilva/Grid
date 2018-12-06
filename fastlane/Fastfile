@@ -44,15 +44,17 @@ platform :ios do
     )
   end
 
-  desc "Deploy to CocoaPods"
-  lane :deploy do
+  desc "Prepare Deploy to CocoaPods"
+  lane :pre_deploy do
     pod_lib_lint
     version_number = get_version_number(xcodeproj: 'Grid.xcodeproj', target: 'Grid')
     tag_name = "#{version_number}"
     add_git_tag(
       tag: tag_name
     )
-    push_to_git_remote
+  end
+  
+  lane :deploy do
     pod_push(use_bundle_exec: true)
   end
 end
