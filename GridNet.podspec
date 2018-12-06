@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'GridNet'
   s.module_name  = 'Grid'
-  s.version      = '0.1.16'
+  s.version      = '0.1.17'
   s.summary      = 'A simple and clean Swift network wrapper'
 
   s.description      = <<-DESC
