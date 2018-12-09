@@ -10,6 +10,7 @@ import Swift
 
 public typealias Parameters = [String: Any]
 
+/// Defines a parameter encoder
 public protocol ParameterEncoder {
     static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws
 }
