@@ -16,7 +16,10 @@ platform :ios do
     xcov(
       project: "Grid.xcodeproj",
       scheme: "Grid",
-      output_directory: "xcov_output"
+      output_directory: "xcov_output",
+      coveralls_service_name: "travis-ci",
+      coveralls_service_job_id: ENV["TRAVIS_BUILD_ID"],
+      coveralls_repo_token: ENV["COVERALLS_REPO_TOKEN"],
     )
   end
 
@@ -53,7 +56,7 @@ platform :ios do
       tag: tag_name
     )
   end
-  
+
   lane :deploy do
     pod_push(use_bundle_exec: true)
   end
