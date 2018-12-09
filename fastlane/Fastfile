@@ -35,6 +35,7 @@ platform :ios do
       message: "Bumping version to %s" % version_number,
       include: ["GridNet.podspec"]
     )
+    jazzy
     push_to_git_remote
     create_pull_request(
       api_token: ENV["GITHUB_API_KEY"],
