@@ -1,0 +1,166 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Dispatcher/Codable/NetworkCodableDispatcher.swift",
+      "line": 11,
+      "symbol": "NetworkDispatcherResult",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Dispatcher/Codable/NetworkCodableDispatcher.swift",
+      "line": 16,
+      "symbol": "NetworkCodableDispatcher.dispatch(request:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Dispatcher/Codable/NetworkCodableDispatcher.swift",
+      "line": 17,
+      "symbol": "NetworkCodableDispatcher.cancel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Dispatcher/Codable/Result.swift",
+      "line": 16,
+      "symbol": "Result.success(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Dispatcher/Codable/Result.swift",
+      "line": 17,
+      "symbol": "Result.failure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Dispatcher/NetworkDispatcher.swift",
+      "line": 11,
+      "symbol": "NetworkDispatcherCompletion",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Dispatcher/NetworkDispatcher.swift",
+      "line": 15,
+      "symbol": "NetworkDispatcher.dispatch(request:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Dispatcher/NetworkDispatcher.swift",
+      "line": 16,
+      "symbol": "NetworkDispatcher.cancel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Encoding/NetworkError.swift",
+      "line": 13,
+      "symbol": "NetworkError.invalidParameters",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Encoding/NetworkError.swift",
+      "line": 14,
+      "symbol": "NetworkError.missingURL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Encoding/NetworkError.swift",
+      "line": 15,
+      "symbol": "NetworkError.malformedURL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Encoding/NetworkError.swift",
+      "line": 17,
+      "symbol": "NetworkError.localizedDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Encoding/ParameterEncoding.swift",
+      "line": 11,
+      "symbol": "Parameters",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/Encoding/ParameterEncoding.swift",
+      "line": 15,
+      "symbol": "ParameterEncoder.encode(urlRequest:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 11,
+      "symbol": "HTTPHeaders",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 16,
+      "symbol": "HTTPMethod.get",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 17,
+      "symbol": "HTTPMethod.post",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 18,
+      "symbol": "HTTPMethod.put",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 19,
+      "symbol": "HTTPMethod.patch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 20,
+      "symbol": "HTTPMethod.delete",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 29,
+      "symbol": "HTTPTask.request",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 30,
+      "symbol": "HTTPTask.requestParameters(bodyParameters:urlParameters:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid/Grid/Sources/HTTP/HTTP.swift",
+      "line": 31,
+      "symbol": "HTTPTask.requestParametersAndHeaders(bodyParameters:urlParameters:additionalHeaders:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/rodrigo.carvaho/Documents/Development/iOS/Projects/Grid"
+}

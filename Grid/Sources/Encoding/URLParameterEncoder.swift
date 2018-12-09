@@ -8,7 +8,17 @@
 
 import Swift
 
+/// A ParameterEncoder that encodes parameters as URL query items.
 public struct URLParameterEncoder: ParameterEncoder {
+
+    /// Encode the `URLRequest` with the given `Parameters` as URL query items.
+    ///
+    /// Note: Defines the requests **Content-Type** as *application/x-ww-form-urlencoded; charset=utf-8*
+    ///
+    /// - Parameters:
+    ///   - urlRequest: A `URLRequest` to be encoded.
+    ///   - parameters: The `Parameters` to encode on the request.
+    /// - Throws: If the request passed in as argument does not have a URL or it has a malformed URL it **will** throw a `NetworkError`
     public static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
         guard let url = urlRequest.url else { throw NetworkError.missingURL }
         let components = try createComponentsFrom(url, with: parameters)

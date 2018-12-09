@@ -10,6 +10,8 @@ import Swift
 
 public typealias HTTPHeaders = [String:String]
 
+
+/// The possible HTTP methods do be used on a request
 public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
@@ -18,6 +20,11 @@ public enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
+/// The poossible HTTP tasksthat can be carried on a request
+///
+/// - request: A simple request with no parameters
+/// - requestParameters: A request with parameters
+/// - requestParametersAndHeaders: A request with paramaeters and additional headers to be added
 public enum HTTPTask {
     case request
     case requestParameters(bodyParameters: Parameters?, urlParameters: Parameters?)
