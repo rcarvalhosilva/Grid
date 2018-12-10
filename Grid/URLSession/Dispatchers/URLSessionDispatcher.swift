@@ -8,14 +8,25 @@
 
 import Swift
 
+/// A URLSessionDispatcher is a `NetworkDispatcher` that uses URLSession to dispatch a request.
 public class URLSessionDispatcher: NetworkDispatcher {
     private var task: URLSessionTask?
     private let session: URLSession
 
+    /// Creates a new URLSessionDispatcher with the given URLSession
+    ///
+    /// - Parameter session: A URLSession object. The shared session by default.
     public init(session: URLSession = .shared) {
         self.session = session
     }
 
+    /// Dispatches the given `Request` and calls the completion when the request is finished.
+    ///
+    /// If the request is canceled the completion **is not** called.
+    ///
+    /// - Parameters:
+    ///   - request: A `Request`.
+    ///   - completion: A `NetworkDispatcherCompletion` block.
     public func dispatch(request: Request, completion: @escaping NetworkDispatcherCompletion) {
         do {
             let request = try buildURLRequest(from: request)
@@ -26,8 +37,10 @@ public class URLSessionDispatcher: NetworkDispatcher {
         task?.resume()
     }
 
+    /// Cancel the request
     public func cancel() {
         task?.cancel()
+        task = nil
     }
 
     private func buildURLRequest(from request: Request) throws -> URLRequest {

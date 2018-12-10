@@ -8,8 +8,8 @@
 
 import Foundation
 
+/// A NetworkError is a error that happens before a the request is executed.
 public enum NetworkError: String, Error, Equatable {
-    case parametersNil = "Parameters were nil."
     case invalidParameters = "Parameters don't specify a valid JSON."
     case missingURL = "URL is nil."
     case malformedURL = "URL is malformed."
