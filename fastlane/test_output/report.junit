@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='GridTests.xctest' tests='2' failures='0'>
-  <testsuite name='GridTests.GridTests' tests='2' failures='0'>
-    <testcase classname='GridTests.GridTests' name='testExample' time='0.006'/>
-    <testcase classname='GridTests.GridTests' name='testPerformanceExample' time='0.708'/>
-  </testsuite>
-</testsuites>
